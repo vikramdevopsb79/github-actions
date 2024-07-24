@@ -16,86 +16,86 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run a one-line script
         run: sleep 1
-#
-#  unit-tests:
-#    runs-on: self-hosted
-#    needs: [build]
-#    steps:
-#      - uses: actions/checkout@v4
-#      - name: Run a one-line script
-#        run: echo Hello, world!
-#
-#  integration-tests:
-#    runs-on: self-hosted
-#    needs: [build]
-#    steps:
-#      - uses: actions/checkout@v4
-#      - name: Run a one-line script
-#        run: echo Hello, world!
-#
-#  code-quality:
-#    runs-on: self-hosted
-#    needs: [build]
-#    steps:
-#      - uses: actions/checkout@v4
-#      - name: Run a one-line script
-#        run: echo Hello, world!
-#
-#  security-checks:
-#    runs-on: self-hosted
-#    needs: [build]
-#    steps:
-#      - uses: actions/checkout@v4
-#      - name: Run a one-line script
-#        run: echo Hello, world!
-#
-#  deploy-to-dev:
-#    runs-on: self-hosted
-#    needs: [security-checks, code-quality, integration-tests, unit-tests]
-#    steps:
-#      - uses: actions/checkout@v4
-#      - name: Run a one-line script
-#        run: echo Hello, world!
-#
-#  deploy-to-qa:
-#    runs-on: self-hosted
-#    needs: [deploy-to-dev]
-#    environment: qa
-#    steps:
-#      - uses: actions/checkout@v4
-#      - name: Run a one-line script
-#        run: echo Hello, world!
-#
-#  functional-tests:
-#    runs-on: self-hosted
-#    needs: [deploy-to-qa]
-#    steps:
-#      - uses: actions/checkout@v4
-#      - name: Run a one-line script
-#        run: echo Hello, world!
-#
-#  e2e-tests:
-#    runs-on: self-hosted
-#    needs: [deploy-to-qa]
-#    steps:
-#      - uses: actions/checkout@v4
-#      - name: Run a one-line script
-#        run: echo Hello, world!
-#
-#  deploy-to-stage:
-#    runs-on: self-hosted
-#    needs: [e2e-tests, functional-tests]
-#    environment: stage
-#    steps:
-#      - uses: actions/checkout@v4
-#      - name: Run a one-line script
-#        run: echo Hello, world!
-#
-#  deploy-to-prod:
-#    runs-on: self-hosted
-#    needs: [deploy-to-stage]
-#    environment: prod
-#    steps:
-#      - uses: actions/checkout@v4
-#      - name: Run a one-line script
-#        run: echo Hello, world!
+
+  unit-tests:
+    runs-on: self-hosted
+    needs: [build]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+  integration-tests:
+    runs-on: self-hosted
+    needs: [build]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+  code-quality:
+    runs-on: self-hosted
+    needs: [build]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+  security-checks:
+    runs-on: self-hosted
+    needs: [build]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+  deploy-to-dev:
+    runs-on: self-hosted
+    needs: [security-checks, code-quality, integration-tests, unit-tests]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+  deploy-to-qa:
+    runs-on: self-hosted
+    needs: [deploy-to-dev]
+    environment: qa
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+  functional-tests:
+    runs-on: self-hosted
+    needs: [deploy-to-qa]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+  e2e-tests:
+    runs-on: self-hosted
+    needs: [deploy-to-qa]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+  deploy-to-stage:
+    runs-on: self-hosted
+    needs: [e2e-tests, functional-tests]
+    environment: stage
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+  deploy-to-prod:
+    runs-on: self-hosted
+    needs: [deploy-to-stage]
+    environment: prod
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a one-line script
+        run: echo Hello, world!
